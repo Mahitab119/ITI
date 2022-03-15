@@ -1,0 +1,10 @@
+#text{
+    -fx-font: 30px "sans-serif";
+    -fx-font-weight: bold;
+    -fx-fill: RED;
+    
+    }
+#root{
+
+    -fx-fill: linear-gradient(from 0px 0px to 0px 50px, black, white 50%, black);
+}
