@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+</head>
+<body>
+    <video id="mycamera" autoplay width="300" height="300"></video>
+    <canvas id="showscreenshot" ></canvas>
+    <img id="imgscreenshot"/>
+    <button onclick="takescreenshot()">take screen shot</button>
+    <script>
+        
+
+        async function showCamera(){
+            if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
+                let stream = await navigator.mediaDevices.getUserMedia({video:true,audio:false});
+                console.log(stream);
+                mycamera.srcObject = stream;
+            }
+        }
+
+        showCamera();
+
+
+        function takescreenshot() {
+            showscreenshot.width = mycamera.videoWidth;
+            showscreenshot.height = mycamera.videoHeight;
+            let ctx = showscreenshot.getContext("2d");
+            
+            console.log(ctx);
+            ctx.drawImage(mycamera, 0, 0);
+            // Other browsers will fall back to image/png
+            let imgAsStr = showscreenshot.toDataURL("image/webp");
+            console.log(imgAsStr);
+            localStorage.myimage = imgAsStr;
+            imgscreenshot.src = imgAsStr;
+        };
+
+
+        if(localStorage.myimage)
+        imgscreenshot.src=localStorage.myimage
+    </script>
+</body>
+</html>

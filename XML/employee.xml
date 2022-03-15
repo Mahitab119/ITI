@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="employee.css"?>
+<Company>
+<Employee>
+    <Name>Mahitab</Name>
+    <Phones>
+        <Phone type="home">5382</Phone>
+        <Phone type="mobile">01272</Phone>
+        <Phone type="work">01555</Phone>
+    </Phones>
+    <Addresses>
+        <Address>
+            <Street>fouad street</Street>
+            <Buliding_number>1</Buliding_number>
+            <Region>anything</Region>
+            <City>Alexandria</City>
+            <Country>Egypt</Country>
+        </Address>
+        <Address>
+            <Street>akl basha street</Street>
+            <Buliding_number>1</Buliding_number>
+            <Region>anything</Region>
+            <City>Alexandria</City>
+            <Country>Egypt</Country>
+        </Address>
+    </Addresses>
+    <E-mail>mahitab@gmail.com</E-mail>
+</Employee>
+</Company>

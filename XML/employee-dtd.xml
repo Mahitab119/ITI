@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE company[
+<!ELEMENT Company (Employee)>
+<!ELEMENT Employee (Name, Phones, Addresses, E-mail)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Phones (Phone+)>
+<!ELEMENT Phone (#PCDATA)>
+<!ATTLIST Phone
+          type CDATA #REQUIRED>
+<!ELEMENT Addresses (Address+)>
+<!ELEMENT Address (Street, Buliding_number, Region, City, Country)>
+<!ELEMENT Street (#PCDATA)>
+<!ELEMENT Buliding_number (#PCDATA)>
+<!ELEMENT Region (#PCDATA)>
+<!ELEMENT City (#PCDATA)>
+<!ELEMENT Country (#PCDATA)>
+<!ELEMENT E-mail (#PCDATA)>
+]>

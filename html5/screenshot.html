@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+</head>
+<body>
+    <video id="camera" autoplay width="300" height="300"></video>
+    <canvas id="screenshot" ></canvas>
+    <button onclick="takescreenshot()">take screen shot</button>
+    <script>
+        
+
+        async function showCamera(){
+            if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
+                let stream = await navigator.mediaDevices.getUserMedia({video:true});
+                console.log(stream);
+                camera.srcObject = stream;
+            }
+        }
+
+        showCamera();
+
+
+        function takescreenshot() {
+            screenshot.width = camera.videoWidth;
+            screenshot.height = camera.videoHeight;
+            let ctx = screenshot.getContext("2d");
+            
+            console.log(ctx);
+            ctx.drawImage(camera, 0, 0);
+        };
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE Library[
+<!ELEMENT Library (book+)>
+<!ELEMENT book (author+, price)>
+<!ATTLIST book
+          ISBN CDATA #REQUIRED
+          publisher CDATA #REQUIRED
+          title CDATA #REQUIRED>
+<!ELEMENT author (name, email?, mobile?)>
+<!ELEMENT name (fname?, lname?)>
+<!ATTLIST name
+          fname CDATA #IMPLIED
+          lname CDATA #IMPLIED>
+<!ELEMENT fname (#PCDATA)>
+<!ELEMENT lname (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT mobile (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST price
+          currency CDATA #REQUIRED>
+          ]>

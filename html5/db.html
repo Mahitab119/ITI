@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let db = window.openDatabase("school","1.0","school managment",1024*1024*5);
+        //crud 
+        
+        /*
+        db.transaction((tx)=>{
+            tx.executeSql("create table if not exists users (id int primary key,name varchar(200) )",[],(tx,result)=>{
+                tx.executeSql("insert into users (id,name) values (?,?)",[1,"admin"],(tx,result)=>{
+
+                },(tx,err)=>{
+                    console.log(err);
+                })
+            },(tx,err)=>{
+                console.log("error:",err);
+            })
+
+           
+
+            tx.executeSql("select * from users",[],(tx,result)=>{
+                for(let i =0;i<result.rows.length;i++){
+                    let record = result.rows[i];
+                    console.log(record);
+                }
+            })
+
+            tx.executeSql("update users set name=? where id=?",["ahmed",1])
+
+            tx.executeSql("delete from users where id=?",[1])
+        })*/
+
+
+        db.transaction((tx)=>{
+            
+            tx.executeSql("create table if not exists users (id int primary key,name varchar(200),password varchar(200) )",[],(tx,result)=>{
+                    tx.executeSql("insert into users (id,name,password) values (?,?,?)",[1,"admin","123"],(tx,result)=>{
+
+                    },(tx,err)=>{
+                        console.log(err);
+                    })
+            },(tx,err)=>{
+                console.log("error:",err);
+            })
+
+            tx.executeSql("create table if not exists students (id int primary key,name varchar(200),age  varchar(200),class   varchar(200))")
+            tx.executeSql("create table if not exists teachers (id int primary key,name varchar(200),age  varchar(200),class   varchar(200), phone varchar(200))")
+        })
+
+
+
+    </script>
+    <script src="student.js" ></script>
+    <script src="teacher.js" ></script>
+</head>
+<body>
+    <div>
+        <h2>Students</h2>
+        Id:<input type="text" id="sId" /><br/>
+        Name:<input type="text" id="sName" /><br/>
+        Age:<input type="date" id="sAge" /><br/>
+        Class:<input type="text" id="sClass" /><br/>
+        <button id="sAddBtn" onclick="addStudent()">Add</button>
+        <button id="sSaveBtn" style="display: none;" onclick="saveStudent()">Save</button>
+
+        <table>
+            <thead>
+                <th>Id</th><th>Name</th><th>Age</th><th>Class</th><th>Actions</th>
+            </thead>
+            <tbody id="sTable">
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <div>
+        <h2>Teachers</h2>
+        Id:<input type="text" id="tId" /><br/>
+        Name:<input type="text" id="tName" /><br/>
+        Age:<input type="date" id="tAge" /><br/>
+        Class:<input type="text" id="tClass" /><br/>
+        Phone:<input type="text" id="tPhone" /><br/>
+        <button id="tAddBtn" onclick="addTeacher()">Add</button>
+        <button id="tSaveBtn" style="display: none;" onclick="saveTeacher()">Save</button>
+
+        <table>
+            <thead>
+                <th>Id</th><th>Name</th><th>Age</th><th>Class</th><th>Phone</th><th>Actions</th>
+            </thead>
+            <tbody id="tTable">
+
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>

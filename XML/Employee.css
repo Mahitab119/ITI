@@ -1,0 +1,22 @@
+Employee
+{
+    background-color:beige;
+    width: 100%;
+}
+Name{
+    font-size: 80px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+}
+Phones,Address{
+    display: block;
+    margin-bottom: 30pt;
+margin-left: 0pt;
+}
+Phone,Street,Buliding_number,Region,City,Country,E-mail{
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    color:black ;
+   
+}

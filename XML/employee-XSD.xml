@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Company">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Employee"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Employee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Name" type="xs:string"/>
+        <xs:element ref="Phones"/>
+        <xs:element ref="Addresses"/>
+        <xs:element name="E-mail" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Phones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Phone" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Phone">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Addresses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Address" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Address">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Street" type="xs:string"/>
+        <xs:element name="Buliding_number" type="xs:string"/>
+        <xs:element name="Region" type="xs:string"/>
+        <xs:element name="City" type="xs:string"/>
+        <xs:element name="Country" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

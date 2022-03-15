@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="library.css"?>
+<library>
+	<Location>Mahtt Masr</Location>
+	<Description>art</Description>
+	<Librarian>Mohamed</Librarian>
+    <Books>
+        <Book>book details
+            <ISBN>112233548</ISBN>
+	        <title>XML</title>
+	        <author>Aly</author>
+            <preface>anything</preface>
+            <Parts>
+                <Part>part details
+                    <title>first title</title>
+                    <Chapters>
+                        <Chapter>first chapter
+                            <title>chapter title</title>
+                            <summary>this summary</summary>
+                            <sections>
+                                <paragraphs>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</paragraphs>
+                            </sections>
+                        </Chapter>
+                        <Chapter>second chapter
+                            <title>chapter title</title>
+                            <summary>this summary</summary>
+                            <sections>
+                                <paragraphs>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</paragraphs>
+                            </sections>
+                        </Chapter>
+                        <Chapter>third chapter
+                            <title>chapter title</title>
+                            <summary>this summary</summary>
+                            <sections>
+                                <paragraphs>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</paragraphs>
+                            </sections>
+                        </Chapter>
+                    </Chapters>
+                </Part>
+            </Parts>
+        </Book>
+        <Book>
+            <ISBN>11255558</ISBN>
+	        <title>XML</title>
+	        <author>Khaled</author>
+            <preface>anything</preface>
+            <Parts>
+                <Part>
+                    <title>first title</title>
+                    <Chapters>
+                        <Chapter>first chapter
+                            <title>chapter title</title>
+                            <summary>this summary</summary>
+                            <sections>
+                                <paragraphs>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</paragraphs>
+                            </sections>
+                        </Chapter>
+                        <Chapter>second chapter<title>chapter title</title>
+                            <summary>this summary</summary>
+                            <sections>
+                                <paragraphs>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</paragraphs>
+                            </sections>
+                        </Chapter>
+                        <Chapter>third chapter<title>chapter title</title>
+                            <summary>this summary</summary>
+                            <sections>
+                                <paragraphs>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</paragraphs>
+                            </sections>
+                        </Chapter>
+                    </Chapters>
+                </Part>
+            </Parts>
+        </Book>
+    </Books>
+</library>
