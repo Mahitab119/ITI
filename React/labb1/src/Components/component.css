@@ -1,0 +1,38 @@
+a{
+    text-decoration: none;
+    color: white;
+    background: #dc3545;
+    padding: 7px 10px;
+    border-radius: 4px;  
+    font-size: 19px;
+ }
+ a:hover{
+    background: rgb(220 53 69 / 85%);
+ }
+ a:focus{
+     outline: 3px solid rgb(220 53 69 / 50%);
+    
+ }
+.img{
+    display: flex;
+    justify-content:space-between;
+ 
+    justify-content: center;
+ }
+
+ .start{
+     background-color: cornflowerblue;
+ }
+
+ .start:hover{
+    background: rgba(135, 180, 247, 0.85);
+ }
+
+.container{
+    height: 100px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
