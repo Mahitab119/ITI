@@ -1,5 +1,6 @@
 <template>
   <div class="container-fluid">
+    <div class="col-6 offset-3">
     <button type="button" @click="choice = 1" class="btn btn-primary mb-2">
       Form
     </button>
@@ -60,15 +61,18 @@
           id="btnradio2"
           autocomplete="off"
         />
-        <label class="btn btn-outline-primary" for="btnradio2">Admin</label>
+        <label class="btn btn-outline-primary ms-2" for="btnradio2">Admin</label>
         <div>
           <button type="submit" class="btn btn-primary mt-3">
             Add User
           </button>
         </div>
       </form>
+      </div>
     </div>
   </div>
+ 
+
   <AdminVue v-if="choice == 2" @delete="deleteAdmin" />
   <StudentVue v-if="choice == 3" @delete="deleteStudent" />
 </template>
